@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fas7ny — AI-Powered Intelligent Travel Planner. A graduation project by Mohnad Waleed using BERT, Genetic Algorithms, PDDL, and A* search.">
+  <meta name="author" content="Mohnad Waleed">
+  <meta property="og:title" content="Fas7ny — AI Travel Planner | Mohnad Waleed">
+  <meta property="og:description" content="A graduation project fusing BERT NLP, Genetic Algorithms, PDDL planning, and A* pathfinding into a unified AI pipeline for personalized travel.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fas7ny — AI Travel Planner | Mohnad Waleed">
+  <meta name="twitter:description" content="A graduation project fusing BERT NLP, Genetic Algorithms, PDDL planning, and A* pathfinding into a unified AI pipeline for personalized travel.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fas7ny.css">
+  <title>Fas7ny — AI Travel Planner | Mohnad Waleed</title>
+</head>
+<body>
+
+<!-- Back to Top -->
+<button id="back-to-top" class="back-to-top" aria-label="Back to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"></polyline></svg>
+</button>
+
+<!-- Navigation -->
+<nav class="nav" id="nav" role="navigation" aria-label="Project navigation">
+  <div class="nav__container">
+    <a href="index.html" class="nav__back" aria-label="Back to portfolio">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Portfolio
+    </a>
+    <a href="#" class="nav__brand" aria-label="Fas7ny project">
+      <span class="nav__brand-mono">fas7ny</span>
+      <span class="nav__brand-ar" lang="ar">فسحني</span>
+    </a>
+    <ul class="nav__links" role="list">
+      <li><a href="#problem"  class="nav__link">Problem</a></li>
+      <li><a href="#solution" class="nav__link">Solution</a></li>
+      <li><a href="#pipeline" class="nav__link">AI Pipeline</a></li>
+      <li><a href="#modules"  class="nav__link">Modules</a></li>
+      <li><a href="#stack"    class="nav__link">Stack</a></li>
+    </ul>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+      <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+      <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+    </button>
+  </div>
+</nav>
+
+<main>
+
+<!-- ══════════════════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════════════════ -->
+<section class="cs-hero" id="top" aria-label="Project overview">
+  <div class="cs-hero__container">
+    <div class="cs-hero__meta" data-reveal="fade-up">
+      <span class="cs-badge">Graduation Project · 2025</span>
+      <span class="cs-badge cs-badge--green">
+        <span class="status-dot" aria-hidden="true"></span>
+        Production Ready
+      </span>
+    </div>
+
+    <h1 class="cs-hero__title" data-reveal="fade-up" data-delay="80">
+      <span class="cs-hero__title-mono">fas7ny</span>
+      <span class="cs-hero__title-ar" lang="ar">فسحني</span>
+    </h1>
+
+    <p class="cs-hero__sub" data-reveal="fade-up" data-delay="160">AI-Powered Intelligent Travel Planner</p>
+
+    <p class="cs-hero__desc" data-reveal="fade-up" data-delay="240">
+      A full-stack mobile application fusing <strong>BERT-based NLP</strong>, <strong>Genetic Algorithms</strong>, <strong>PDDL planning</strong>, and <strong>A* pathfinding</strong> into a unified AI pipeline — generating hyper-personalized travel itineraries with real-time pricing, smart recommendations, and seamless payment processing.
+    </p>
+
+    <div class="cs-hero__chips" data-reveal="fade-up" data-delay="320">
+      <span class="chip">Flutter</span>
+      <span class="chip">Node.js</span>
+      <span class="chip">MongoDB</span>
+      <span class="chip">Firebase</span>
+      <span class="chip chip--hi">BERT</span>
+      <span class="chip chip--hi">Genetic Algorithms</span>
+      <span class="chip chip--hi">PDDL</span>
+      <span class="chip chip--hi">A*</span>
+      <span class="chip">Redis</span>
+      <span class="chip">JWT</span>
+    </div>
+  </div>
+
+  <!-- Video Player -->
+  <div class="cs-video" data-reveal="fade-up" data-delay="400">
+    <div class="cs-video__wrap">
+      <div class="cs-video__label" aria-hidden="true">Demo Video</div>
+      <video
+        class="cs-video__player"
+        controls
+        preload="metadata"
+        aria-label="Fas7ny app demo video"
+      >
+        <source src="fas7ny-demo.mp4" type="video/mp4">
+        <p>Your browser does not support the HTML5 video element. <a href="fas7ny-demo.mp4">Download the video</a>.</p>
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     QUICK STATS
+══════════════════════════════════════════════════════════ -->
+<section class="cs-stats" aria-label="Project statistics">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item" data-reveal="fade-up" data-delay="0">
+        <div class="stat-item__val">BERT</div>
+        <div class="stat-item__lbl">NLP Understanding</div>
+      </div>
+      <div class="stat-item" data-reveal="fade-up" data-delay="80">
+        <div class="stat-item__val">Genetic<br>Algorithm</div>
+        <div class="stat-item__lbl">Route Optimization</div>
+      </div>
+      <div class="stat-item" data-reveal="fade-up" data-delay="160">
+        <div class="stat-item__val">PDDL</div>
+        <div class="stat-item__lbl">AI Trip Planning</div>
+      </div>
+      <div class="stat-item" data-reveal="fade-up" data-delay="240">
+        <div class="stat-item__val">A*</div>
+        <div class="stat-item__lbl">Smart Pathfinding</div>
+      </div>
+      <div class="stat-item" data-reveal="fade-up" data-delay="320">
+        <div class="stat-item__val">10+</div>
+        <div class="stat-item__lbl">Core Modules</div>
+      </div>
+      <div class="stat-item" data-reveal="fade-up" data-delay="400">
+        <div class="stat-item__val">2025</div>
+        <div class="stat-item__lbl">BUE Graduation</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     PROBLEM
+══════════════════════════════════════════════════════════ -->
+<section class="cs-section" id="problem" aria-label="Problem statement">
+  <div class="container">
+    <div class="cs-section__grid">
+      <div class="cs-section__text" data-reveal="fade-up">
+        <div class="section-eyebrow">Problem</div>
+        <h2 class="section-heading">Travel planning is <em>broken.</em></h2>
+        <div class="cs-prose">
+          <p>Modern travelers face a fragmented, time-consuming experience. Planning a trip requires juggling multiple apps — search engines, review sites, booking platforms, and payment gateways — none of which understand the traveler's <em>actual preferences</em>.</p>
+          <p>Generic recommendation engines suggest popular destinations with no regard for budget constraints, group dynamics, time availability, or personal interests. The result is either decision paralysis or a mediocre trip that could have been much better.</p>
+          <p>The core challenge: <strong>How do you build a system that truly understands what someone wants, reasons about their constraints, and generates an optimal, executable travel plan — all in real-time?</strong></p>
+        </div>
+      </div>
+      <div class="cs-section__visual" data-reveal="fade-left" data-delay="120">
+        <div class="problem-card">
+          <div class="problem-card__title">Pain Points</div>
+          <ul class="problem-list" role="list">
+            <li class="problem-item problem-item--bad">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+              Fragmented booking across 5+ platforms
+            </li>
+            <li class="problem-item problem-item--bad">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+              Generic recommendations ignoring context
+            </li>
+            <li class="problem-item problem-item--bad">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+              No budget or time optimization
+            </li>
+            <li class="problem-item problem-item--bad">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+              Manual itinerary building takes hours
+            </li>
+            <li class="problem-item problem-item--bad">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+              No support for natural language input
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     SOLUTION
+══════════════════════════════════════════════════════════ -->
+<section class="cs-section cs-section--alt" id="solution" aria-label="Solution overview">
+  <div class="container">
+    <div class="cs-section__grid cs-section__grid--rev">
+      <div class="cs-section__text" data-reveal="fade-up">
+        <div class="section-eyebrow">Solution</div>
+        <h2 class="section-heading">One AI pipeline. <em>Complete</em> travel intelligence.</h2>
+        <div class="cs-prose">
+          <p>Fas7ny replaces all those fragmented tools with a single intelligent platform. A user types their request in natural Arabic or English — <em>"Plan a 3-day Cairo trip for two people on a 2000 EGP budget"</em> — and the AI engine does the rest.</p>
+          <p>The system processes the intent through <strong>BERT NLP</strong>, builds a personalized user profile, then passes the problem to a <strong>Genetic Algorithm</strong> to find the globally optimal set of destinations. A <strong>PDDL planner</strong> sequences the activities into an executable schedule, while <strong>A* search</strong> computes the most efficient travel routes between locations.</p>
+          <p>The result is a complete, personalized, budget-respecting itinerary — delivered in seconds, with real-time pricing and integrated payment.</p>
+        </div>
+      </div>
+      <div class="cs-section__visual" data-reveal="fade-left" data-delay="120">
+        <div class="solution-card">
+          <div class="solution-card__title">What Fas7ny Does</div>
+          <ul class="problem-list" role="list">
+            <li class="problem-item problem-item--good">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Natural language input in Arabic &amp; English
+            </li>
+            <li class="problem-item problem-item--good">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Budget-aware, preference-personalized trips
+            </li>
+            <li class="problem-item problem-item--good">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Globally optimal routes via Genetic Algorithms
+            </li>
+            <li class="problem-item problem-item--good">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              PDDL-planned, A*-refined itineraries
+            </li>
+            <li class="problem-item problem-item--good">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Real-time pricing &amp; payment in one app
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     ARCHITECTURE
+══════════════════════════════════════════════════════════ -->
+<section class="cs-section" aria-label="System architecture">
+  <div class="container">
+    <div class="section-eyebrow" data-reveal="fade-up">Architecture</div>
+    <h2 class="section-heading" data-reveal="fade-up" data-delay="80">System Design</h2>
+
+    <div class="arch-diagram" data-reveal="fade-up" data-delay="160" aria-label="Fas7ny system architecture diagram">
+
+      <div class="arch-col arch-col--1">
+        <div class="arch-label-top">Client</div>
+        <div class="arch-box arch-box--app">
+          <div class="arch-box__icon" aria-hidden="true">📱</div>
+          <div class="arch-box__name">Flutter App</div>
+          <div class="arch-box__sub">Mobile UI · State Mgmt</div>
+        </div>
+      </div>
+
+      <div class="arch-connector arch-connector--h" aria-hidden="true">
+        <div class="arch-line-h"></div>
+        <svg width="10" height="16" viewBox="0 0 10 16"><polygon points="0,0 10,8 0,16" fill="currentColor"/></svg>
+      </div>
+
+      <div class="arch-col arch-col--2">
+        <div class="arch-label-top">Backend</div>
+        <div class="arch-col__nodes">
+          <div class="arch-box arch-box--api">
+            <div class="arch-box__icon" aria-hidden="true">⚡</div>
+            <div class="arch-box__name">Node.js API</div>
+            <div class="arch-box__sub">REST · Express · JWT</div>
+          </div>
+          <div class="arch-box arch-box--auth">
+            <div class="arch-box__icon" aria-hidden="true">🔐</div>
+            <div class="arch-box__name">Firebase Auth</div>
+            <div class="arch-box__sub">OAuth · Sessions</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="arch-connector arch-connector--h" aria-hidden="true">
+        <div class="arch-line-h"></div>
+        <svg width="10" height="16" viewBox="0 0 10 16"><polygon points="0,0 10,8 0,16" fill="currentColor"/></svg>
+      </div>
+
+      <div class="arch-col arch-col--3">
+        <div class="arch-label-top">AI Engine</div>
+        <div class="arch-col__nodes">
+          <div class="arch-box arch-box--ai">
+            <div class="arch-box__icon" aria-hidden="true">🧠</div>
+            <div class="arch-box__name">BERT NLP</div>
+            <div class="arch-box__sub">Intent · Entities</div>
+          </div>
+          <div class="arch-box arch-box--ai">
+            <div class="arch-box__icon" aria-hidden="true">🧬</div>
+            <div class="arch-box__name">Genetic Algorithm</div>
+            <div class="arch-box__sub">Route Optimization</div>
+          </div>
+          <div class="arch-box arch-box--ai">
+            <div class="arch-box__icon" aria-hidden="true">📋</div>
+            <div class="arch-box__name">PDDL Planner</div>
+            <div class="arch-box__sub">Itinerary Sequencing</div>
+          </div>
+          <div class="arch-box arch-box--ai">
+            <div class="arch-box__icon" aria-hidden="true">🗺️</div>
+            <div class="arch-box__name">A* Search</div>
+            <div class="arch-box__sub">Optimal Pathfinding</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="arch-connector arch-connector--h" aria-hidden="true">
+        <div class="arch-line-h"></div>
+        <svg width="10" height="16" viewBox="0 0 10 16"><polygon points="0,0 10,8 0,16" fill="currentColor"/></svg>
+      </div>
+
+      <div class="arch-col arch-col--4">
+        <div class="arch-label-top">Data</div>
+        <div class="arch-col__nodes">
+          <div class="arch-box arch-box--db">
+            <div class="arch-box__icon" aria-hidden="true">🍃</div>
+            <div class="arch-box__name">MongoDB</div>
+            <div class="arch-box__sub">Primary Store</div>
+          </div>
+          <div class="arch-box arch-box--db">
+            <div class="arch-box__icon" aria-hidden="true">⚡</div>
+            <div class="arch-box__name">Redis</div>
+            <div class="arch-box__sub">Cache · Sessions</div>
+          </div>
+          <div class="arch-box arch-box--db">
+            <div class="arch-box__icon" aria-hidden="true">🔥</div>
+            <div class="arch-box__name">Firebase</div>
+            <div class="arch-box__sub">Realtime · Storage</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     AI PIPELINE
+══════════════════════════════════════════════════════════ -->
+<section class="cs-section cs-section--alt" id="pipeline" aria-label="AI pipeline">
+  <div class="container">
+    <div class="section-eyebrow" data-reveal="fade-up">AI Pipeline</div>
+    <h2 class="section-heading" data-reveal="fade-up" data-delay="80">How the Intelligence Works</h2>
+
+    <div class="pipeline" data-reveal="fade-up" data-delay="160">
+
+      <div class="pipeline__step">
+        <div class="pipeline__num" aria-hidden="true">01</div>
+        <div class="pipeline__content">
+          <div class="pipeline__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3 class="pipeline__title">Natural Language Input</h3>
+          <p class="pipeline__desc">User enters a free-text travel request in Arabic or English. No forms, no dropdowns — just a natural sentence like "خطط لرحلة للإسكندرية لمدة يومين بميزانية ١٥٠٠ جنيه".</p>
+          <div class="pipeline__tags"><span class="ptag">Arabic NLP</span><span class="ptag">Free Text</span></div>
+        </div>
+      </div>
+
+      <div class="pipeline__arrow" aria-hidden="true"></div>
+
+      <div class="pipeline__step">
+        <div class="pipeline__num" aria-hidden="true">02</div>
+        <div class="pipeline__content">
+          <div class="pipeline__icon pipeline__icon--ai" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+          </div>
+          <h3 class="pipeline__title">BERT NLP Processing</h3>
+          <p class="pipeline__desc">A fine-tuned BERT model extracts intent, entities (destination, duration, budget, group size, preferences), and sentiment. Handles both Modern Standard Arabic and Egyptian dialect.</p>
+          <div class="pipeline__tags"><span class="ptag ptag--ai">BERT</span><span class="ptag ptag--ai">NER</span><span class="ptag ptag--ai">Intent Classification</span></div>
+        </div>
+      </div>
+
+      <div class="pipeline__arrow" aria-hidden="true"></div>
+
+      <div class="pipeline__step">
+        <div class="pipeline__num" aria-hidden="true">03</div>
+        <div class="pipeline__content">
+          <div class="pipeline__icon pipeline__icon--ai" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          </div>
+          <h3 class="pipeline__title">Recommendation Engine</h3>
+          <p class="pipeline__desc">Based on extracted profile and user history, a collaborative filtering model suggests candidate places, experiences, and activities that match the user's profile and budget constraints.</p>
+          <div class="pipeline__tags"><span class="ptag ptag--ai">Collaborative Filtering</span><span class="ptag ptag--ai">User Profiling</span></div>
+        </div>
+      </div>
+
+      <div class="pipeline__arrow" aria-hidden="true"></div>
+
+      <div class="pipeline__step">
+        <div class="pipeline__num" aria-hidden="true">04</div>
+        <div class="pipeline__content">
+          <div class="pipeline__icon pipeline__icon--ai" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <h3 class="pipeline__title">Genetic Algorithm Optimization</h3>
+          <p class="pipeline__desc">A GA evolves a population of candidate itineraries over multiple generations, optimizing for: satisfaction score, total cost, travel time, and constraint satisfaction. Finds near-optimal solutions in polynomial time.</p>
+          <div class="pipeline__tags"><span class="ptag ptag--ai">Genetic Algorithm</span><span class="ptag ptag--ai">Multi-objective Optimization</span></div>
+        </div>
+      </div>
+
+      <div class="pipeline__arrow" aria-hidden="true"></div>
+
+      <div class="pipeline__step">
+        <div class="pipeline__num" aria-hidden="true">05</div>
+        <div class="pipeline__content">
+          <div class="pipeline__icon pipeline__icon--ai" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <h3 class="pipeline__title">PDDL Trip Planning</h3>
+          <p class="pipeline__desc">PDDL (Planning Domain Definition Language) structures the selected activities into a temporally consistent, action-sequence plan. Handles dependencies between activities (e.g., hotel check-in before museum visits).</p>
+          <div class="pipeline__tags"><span class="ptag ptag--ai">PDDL</span><span class="ptag ptag--ai">Temporal Planning</span><span class="ptag ptag--ai">Constraint Satisfaction</span></div>
+        </div>
+      </div>
+
+      <div class="pipeline__arrow" aria-hidden="true"></div>
+
+      <div class="pipeline__step">
+        <div class="pipeline__num" aria-hidden="true">06</div>
+        <div class="pipeline__content">
+          <div class="pipeline__icon pipeline__icon--ai" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3 class="pipeline__title">A* Pathfinding &amp; Final Itinerary</h3>
+          <p class="pipeline__desc">A* search computes the most efficient travel routes between locations using real-world distance and traffic heuristics. The final itinerary is packaged with real-time pricing, integrated booking, and payment processing.</p>
+          <div class="pipeline__tags"><span class="ptag ptag--ai">A* Search</span><span class="ptag">Dynamic Pricing</span><span class="ptag">Payment</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     MODULES
+══════════════════════════════════════════════════════════ -->
+<section class="cs-section" id="modules" aria-label="Application modules">
+  <div class="container">
+    <div class="section-eyebrow" data-reveal="fade-up">Modules</div>
+    <h2 class="section-heading" data-reveal="fade-up" data-delay="80">Core Application Modules</h2>
+
+    <div class="modules-grid">
+
+      <div class="module-card" data-reveal="fade-up" data-delay="0">
+        <div class="module-card__icon module-card__icon--1" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3 class="module-card__title">NLP Understanding</h3>
+        <p class="module-card__desc">Fine-tuned BERT model for Arabic/English intent classification, named entity recognition (destinations, dates, budget), and sentiment analysis of user preferences.</p>
+        <div class="module-card__tech"><span class="mtag">BERT</span><span class="mtag">Transformers</span><span class="mtag">Arabic NLP</span></div>
+      </div>
+
+      <div class="module-card" data-reveal="fade-up" data-delay="80">
+        <div class="module-card__icon module-card__icon--2" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3 class="module-card__title">Recommendation Engine</h3>
+        <p class="module-card__desc">Collaborative and content-based filtering to surface contextually relevant destinations, activities, and restaurants. Learns from user interactions and continuously improves suggestions.</p>
+        <div class="module-card__tech"><span class="mtag">Collaborative Filtering</span><span class="mtag">User Profiles</span><span class="mtag">Redis</span></div>
+      </div>
+
+      <div class="module-card" data-reveal="fade-up" data-delay="160">
+        <div class="module-card__icon module-card__icon--3" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <h3 class="module-card__title">Optimization Engine</h3>
+        <p class="module-card__desc">Multi-objective Genetic Algorithm that balances cost, satisfaction, and travel time simultaneously. Evolves itinerary populations through selection, crossover, and mutation to find optimal solutions.</p>
+        <div class="module-card__tech"><span class="mtag">Genetic Algorithms</span><span class="mtag">Multi-objective</span><span class="mtag">Heuristics</span></div>
+      </div>
+
+      <div class="module-card" data-reveal="fade-up" data-delay="0">
+        <div class="module-card__icon module-card__icon--4" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <h3 class="module-card__title">AI Trip Planning</h3>
+        <p class="module-card__desc">PDDL-based formal planner that converts the optimized destination list into a structured, time-consistent daily schedule. Handles temporal dependencies and activity sequencing constraints.</p>
+        <div class="module-card__tech"><span class="mtag">PDDL</span><span class="mtag">Temporal Logic</span><span class="mtag">AI Planning</span></div>
+      </div>
+
+      <div class="module-card" data-reveal="fade-up" data-delay="80">
+        <div class="module-card__icon module-card__icon--5" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h3 class="module-card__title">Dynamic Pricing</h3>
+        <p class="module-card__desc">Real-time price aggregation and comparison for hotels, activities, and restaurants. Tracks price fluctuations, applies budget constraints, and suggests alternatives when costs exceed limits.</p>
+        <div class="module-card__tech"><span class="mtag">Real-time APIs</span><span class="mtag">Budget Engine</span><span class="mtag">Node.js</span></div>
+      </div>
+
+      <div class="module-card" data-reveal="fade-up" data-delay="160">
+        <div class="module-card__icon module-card__icon--6" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        </div>
+        <h3 class="module-card__title">Payment Integration</h3>
+        <p class="module-card__desc">Secure, in-app payment processing for bookings. Integrates with payment gateways, manages transaction state, handles refunds, and generates booking confirmations — all within the Flutter app.</p>
+        <div class="module-card__tech"><span class="mtag">Payment Gateway</span><span class="mtag">JWT</span><span class="mtag">Flutter</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     TECH STACK
+══════════════════════════════════════════════════════════ -->
+<section class="cs-section cs-section--alt" id="stack" aria-label="Technology stack">
+  <div class="container">
+    <div class="section-eyebrow" data-reveal="fade-up">Technology</div>
+    <h2 class="section-heading" data-reveal="fade-up" data-delay="80">Full Tech Stack</h2>
+
+    <div class="stack-grid" data-reveal="fade-up" data-delay="160">
+
+      <div class="stack-group">
+        <h3 class="stack-group__title">Mobile</h3>
+        <div class="stack-items">
+          <div class="stack-item"><span class="stack-item__name">Flutter</span><span class="stack-item__role">Cross-platform UI</span></div>
+          <div class="stack-item"><span class="stack-item__name">Dart</span><span class="stack-item__role">Application Language</span></div>
+          <div class="stack-item"><span class="stack-item__name">Provider</span><span class="stack-item__role">State Management</span></div>
+        </div>
+      </div>
+
+      <div class="stack-group">
+        <h3 class="stack-group__title">Backend</h3>
+        <div class="stack-items">
+          <div class="stack-item"><span class="stack-item__name">Node.js</span><span class="stack-item__role">Runtime</span></div>
+          <div class="stack-item"><span class="stack-item__name">Express.js</span><span class="stack-item__role">REST API</span></div>
+          <div class="stack-item"><span class="stack-item__name">JWT</span><span class="stack-item__role">Authentication</span></div>
+        </div>
+      </div>
+
+      <div class="stack-group">
+        <h3 class="stack-group__title">Databases</h3>
+        <div class="stack-items">
+          <div class="stack-item"><span class="stack-item__name">MongoDB</span><span class="stack-item__role">Primary Database</span></div>
+          <div class="stack-item"><span class="stack-item__name">Firebase</span><span class="stack-item__role">Realtime &amp; Auth</span></div>
+          <div class="stack-item"><span class="stack-item__name">Redis</span><span class="stack-item__role">Caching Layer</span></div>
+        </div>
+      </div>
+
+      <div class="stack-group">
+        <h3 class="stack-group__title">AI &amp; ML</h3>
+        <div class="stack-items">
+          <div class="stack-item stack-item--hi"><span class="stack-item__name">BERT</span><span class="stack-item__role">NLP Model</span></div>
+          <div class="stack-item stack-item--hi"><span class="stack-item__name">Genetic Algorithms</span><span class="stack-item__role">Optimization</span></div>
+          <div class="stack-item stack-item--hi"><span class="stack-item__name">PDDL</span><span class="stack-item__role">AI Planning</span></div>
+          <div class="stack-item stack-item--hi"><span class="stack-item__name">A* Search</span><span class="stack-item__role">Pathfinding</span></div>
+          <div class="stack-item"><span class="stack-item__name">Python</span><span class="stack-item__role">AI Services</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     CTA
+══════════════════════════════════════════════════════════ -->
+<section class="cs-cta" aria-label="Return to portfolio">
+  <div class="container">
+    <div class="cta-card" data-reveal="fade-up">
+      <h2 class="cta-card__title">Want to see more?</h2>
+      <p class="cta-card__desc">Fas7ny is just one part of what I build. Head back to the portfolio to explore other projects and get in touch.</p>
+      <div class="cta-card__actions">
+        <a href="index.html" class="btn btn--primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+          Back to Portfolio
+        </a>
+        <a href="mailto:mohndbata648@gmail.com" class="btn btn--secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Get In Touch
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer" role="contentinfo">
+  <div class="footer__inner">
+    <p class="footer__left">
+      <a href="index.html" class="footer__home">Mohnad Waleed</a>
+      <span class="footer__sep">·</span>
+      <span>Fas7ny — AI Travel Planner</span>
+    </p>
+    <p class="footer__copy">&copy; 2026 Mohnad Waleed. All rights reserved.</p>
+    <a href="https://github.com/mohnadwaleed" target="_blank" rel="noopener noreferrer" class="footer__gh" aria-label="GitHub">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+    </a>
+  </div>
+</footer>
+
+<script src="fas7ny.js"></script>
+</body>
+</html>
